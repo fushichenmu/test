@@ -1,5 +1,5 @@
 label_bar_params_dict = {
-    "whole_china_lb":{
+    "china_label_bar_lb":{
         "lbAutoManage":False,
         "lbLabelAlignment":"BoxCenters",
         "lbTitleString":"fads",
@@ -13,19 +13,21 @@ label_bar_params_dict = {
         "lbBoxMajorExtentF":0.8,
         "lbMonoFillPattern":True,
         "lbLabelJust":"CenterLeft",
+
+        "vpWidthF":0.11
     },
 
-    "whole_china_vp" :{
-        "vpWidthF":0.11
+    "china_label_bar_vp" :{
+
 
     }
 
 }
 
 
-def get_whole_china_common_config():
-    whole_china_common_config = {}
+def get_china_label_bar_common_config():
+    china_label_bar_common_config = {}
     for var_name in label_bar_params_dict.keys():
-        if var_name.startswith('whole_china_'):
-            whole_china_common_config.update(label_bar_params_dict[var_name])
-    return whole_china_common_config
+        if var_name.startswith('china_label_bar_'):
+            china_label_bar_common_config.update(label_bar_params_dict[var_name])
+    return china_label_bar_common_config

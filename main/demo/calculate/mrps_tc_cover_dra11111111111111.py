@@ -8,9 +8,9 @@ def setCommonRes(res=None):
         res = Ngl.Resources()
     res.gsnFrame = False
     res.gsnDraw = False
-    res.tiMainOn = False
     res.gsnLeftString = ""
     res.gsnRightString = ""
+    res.tiMainOn = False
     res.tmXBMinorOn = False
     res.tmYLMinorOn = False
     res.vpXF = 0
@@ -51,6 +51,13 @@ def drawContour(input_data, lon, lat, area_name, config_path, output_img_name, o
     maxLon = max(lon)
     minLat = min(lat)
     maxLat = max(lat)
+    input_data = businessDto.input_data
+    output_img_type = self.businessDto.output_img_type
+    output_img_path = self.businessDto.output_img_path
+    output_img_name = self.businessDto.output_img_name
+    color_cfg_file = self.businessDto.color_cfg_file
+
+
     imgSizes = IoUtil.readConfig_int(config_path, "imgSize_" + business_id).split(",")
     # 创建工作台
     wkres = Ngl.Resources()

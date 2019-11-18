@@ -6,7 +6,7 @@ class WorkstationHandler:
     def __init__(self
                  , output_img_type=''  #最终输出图片格式 例:png
                  , output_img_path=''  #最终输出图片位置，例:/usr/local/example
-                 , color_cfg_file=''   #色板配置文件
+                 , color_levels=''   #色板配置文件
                  , wK_res_params={}  #workstation的Resource相关配置参数
                  , plot=None):
 
@@ -16,8 +16,8 @@ class WorkstationHandler:
             os.makedirs(output_img_path)
         self.__wk = Ngl.open_wks(output_img_type, output_img_path, self.__wk_res)
         # workstation配置颜色
-        cmap = colorTool.getColorMap(color_cfg_file)
-        Ngl.define_colormap(self.__wk, cmap)
+        # cmap = colorTool.getColorMap(color_cfg_file)
+        Ngl.define_colormap(self.__wk, color_levels)
         self.plot = plot
 
     def _get_wk_res(self):

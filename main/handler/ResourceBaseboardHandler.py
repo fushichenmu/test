@@ -3,26 +3,23 @@ from resourceConfig import BaseboardConfig as bbc
 from util.ResourcesUtils import create_or_update_resource
 from util import colorTool
 import Ngl
-
+import numpy as np
 
 class ResourceBaseboardHandler(ResourceCommonHandler):
 
-    def __init__(self, workstation,input_data,use_default_setting,color_cfg_file):
-        ResourceCommonHandler.__init__(self,workstation,input_data,use_default_setting)
-        self.color_cfg_file = color_cfg_file
+    def __init__(self, workstation,input_data,param_dict,color_levels):
+        ResourceCommonHandler.__init__(self,workstation,input_data)
+        self.param_dict =param_dict
+        self.color_levels =color_levels
 
     def contour_map(self):
         resource_config = {}
-        # 是否使用默认配置
-        if self.use_dafault_setting:
-            resource_config = bbc.get_whole_china_common_config()
 
         # 是否有色板配置文件
-        if self.color_cfg_file:
-            cnLevels = colorTool.getColorValueDef(self.color_cfg_file)
+        if self.color_levels:
             cn_params_dict = {
-                "cnLevels": cnLevels
-                , "cnFillColors": colorTool.getColorOrder(self.color_cfg_file)
+                "cnLevels": self.color_levels
+                , "cnFillColors":np.arange(0,len(self.color_levels),1).tolist()
             }
             resource_config.update(cn_params_dict)
 

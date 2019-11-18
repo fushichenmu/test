@@ -1,5 +1,5 @@
 scale_params_dict = {
-    "whole_china_tx" :{
+    "china_scale" :{
         "txFontHeightF" :0.012097,
         "txFontColor" : "black"
     }

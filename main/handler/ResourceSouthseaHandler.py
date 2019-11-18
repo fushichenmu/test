@@ -1,5 +1,5 @@
 from handler import ResourceCommonHandler
-from resourceConfig import PolylineConfig as plc
+from resourceConfig import GISLayersConfig as plc
 from resourceConfig import SouthSeaConfig as ssc
 from util.ResourcesUtils import create_or_update_resource
 import numpy as np

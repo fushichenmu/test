@@ -1,5 +1,5 @@
 baseboard_params_dict = {
-    'whole_china_cn_common_params_dict': {
+    'china_baseboard': {
         'cnLevelSelectionMode': 'ExplicitLevels'
         , 'cnInfoLabelOn': False
         , 'cnFillOn': True
@@ -7,23 +7,17 @@ baseboard_params_dict = {
         , 'cnLinesOn': False
         , 'cnLevelSpacingF': 20.0
         , 'cnLineLabelsOn': False
-    },
 
-    'whole_china_gsn_common_params_dict': {
-        'gsnMaximize': False
+        , 'gsnMaximize': False
         , 'gsnDraw': False  # 关掉gsn绘图
         , 'gsnFrame': False  # 关掉gsn绘图框架
         , 'gsnAddCyclic': False  # 不是全球地图，
         , 'gsnRightString': ' '  # 绘图的上边界上方添加给定的字符串，并对其右对齐
         , 'gsnLeftString': ' '  # 绘图的上边界上方添加给定的字符串，并对其左对齐
-    },
 
-    'whole_china_lb_common_params_dict': {
-        'lbLabelBarOn': False
-    },
+        ,'lbLabelBarOn': False
 
-    'whole_china_mp_common_params_dict': {
-        'mpProjection': 'LambertConformal'
+        , 'mpProjection': 'LambertConformal'
         , 'mpGridAndLimbOn': False
         , 'mpLambertMeridianF': 105.0
         , 'mpLimitMode': 'Corners '
@@ -50,35 +44,31 @@ baseboard_params_dict = {
         , 'mpNationalLineColor': 'white'
         , 'mpGeophysicalLineColor': 'white'
         , 'mpNationalLineThicknessF': 0.0
-    },
 
-    'whole_china_pm_common_params_dict': {
-        'pmTickMarkDisplayMode': 'Always'
-    },
+        , 'pmTickMarkDisplayMode': 'Always'
 
-    'whole_china_tm_common_params_dict': {
-        'tmXBOn': False
+        , 'tmXBOn': False
         , 'tmXTOn': False
         , 'tmYLOn': False
         , 'tmYROn': False
-    },
 
-    'whole_china_vp_common_params_dict': {
-        'vpXF': 0.
+        ,'vpXF': 0.
         , 'vpYF': 1.
         , 'vpWidthF': 1.
         , 'vpHeightF': 1.
-    }
+    },
+
+
 }
 
 
 
-def get_whole_china_common_config():
-    whole_china_common_config = {}
+def get_china_common_config():
+    china_common_config = {}
     for var_name in baseboard_params_dict.keys():
-        if var_name.startswith('whole_china_'):
-            whole_china_common_config.update(baseboard_params_dict[var_name])
-    return whole_china_common_config
+        if var_name.startswith('china_'):
+            china_common_config.update(baseboard_params_dict[var_name])
+    return china_common_config
 
-# ddd = get_whole_china_common_config()
+# ddd = get_china_common_config()
 # print(ddd)

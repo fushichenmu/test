@@ -1,0 +1,17 @@
+<xml>
+    <!-- 一级入参-->
+    <region_type>wholeChina</region_type>
+    <!-- 二级入参传入的是一个id-->
+    <second_params_file_id>E:\PythonWorkSpace\test\main\util\second_params.xml</second_params_file_id>
+    <business_id>9999</business_id>
+    <!-- 三级入参-->
+    <output_img_path>/home/nriet/tmp/</output_img_path>
+    <output_img_name>demo</output_img_name>
+    <output_img_type>.png</output_img_type>
+    <output_img_size>930x696</output_img_size>
+    <unit>吨/天/KM^2</unit>
+    <sub_title_1>2019年11月11日</sub_title_1> <!-- 不同副标要用#分割,同一标题内的不同内容需要按照|分割-->
+    <sub_title_2>20191106|20191205</sub_title_2>
+</xml>
+
+

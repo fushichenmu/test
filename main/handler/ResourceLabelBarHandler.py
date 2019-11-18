@@ -1,6 +1,6 @@
 from handler import ResourceCommonHandler
-from resourceConfig import LabelBarConfig as lbc
-from resourceConfig import LabelBarLocationConfig as lblc
+from resourceConfig import LebelBarConfig as lbc
+from resourceConfig import LegendLocationConfig as lblc
 from util.ResourcesUtils import create_or_update_resource
 from util import colorTool
 import numpy as np
@@ -22,6 +22,7 @@ class ResourceLabelBarHandler(ResourceCommonHandler):
 
         #2.读取色标取值数据
         cn_fill_colors = colorTool.getColorOrder(self.color_cfg_file)
+
         cn_levels = colorTool.getColorValueDef(self.color_cfg_file)
         nboxes = np.shape(cn_fill_colors)[0]
         labels = [""] * nboxes

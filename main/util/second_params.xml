@@ -1,0 +1,17 @@
+<xml>
+    <main_title>主标题一般代表整个业务，基本不会变更</main_title>
+    <sub_title_1>起报时间:$</sub_title_1>
+    <sub_title_2>预报时间:$-$</sub_title_2>
+    <unit>单位($)</unit>
+    <color_lables>
+        &gt;90|80~90|70~80|60~70|50~60|40~50|30~40|20~30|12~20|6~12|3~6|&lt;3|No Data
+    </color_lables>
+    <color_levels>
+        35,120,230|55,145,240|85,187,245|160,225,250|225,255,255|255,250,200|255,210,120|255,150,20|225,100,0|200,50,0
+    </color_levels>
+    <color_levels_default>
+        255,255,255|0,0,0|255,0,0|0,0,255|0,69,107
+    </color_levels_default>
+
+
+</xml>

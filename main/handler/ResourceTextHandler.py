@@ -1,5 +1,5 @@
 from handler import ResourceCommonHandler
-from resourceConfig import scaleConfig as sc
+from resourceConfig import ScaleConfig as sc
 from util.ResourcesUtils import create_or_update_resource
 import Ngl
 
