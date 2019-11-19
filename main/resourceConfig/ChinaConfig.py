@@ -139,8 +139,18 @@ china_params_dict = {
 
         "vpWidthF": 0.11
     },
+
+    # 图例位置
+    "china_labelbar_location": {
+        "amJust": "BottomLeft",
+        "amParallelPosF": -0.489247,
+        "amOrthogonalPosF": 0.4856322
+    },
+
     # 比例尺
     "china_scale": {
+        "scala_figure": "Scale 1:20 000 000",
+        "location": "95x17",
         "txFontHeightF": 0.012097,
         "txFontColor": "black"
     },
@@ -269,7 +279,9 @@ china_params_dict = {
         },
         # 比例尺
         'south_sea_scale': {
-            "txFontHeightF": 0.008
+            "scala_figure": "1:40 000 000"
+            , "location": "118x3"
+            , "txFontHeightF": 0.008
             , "txFontColor": "black"
         },
         # 小地图位置
@@ -278,6 +290,15 @@ china_params_dict = {
             , "amOrthogonalPosF": 0.4856322
             , "amJust": "BottomRight"
         }
+    },
+
+    # logo 和 标题
+    "logo_and_titles": {
+        "font_file_path": "/home/nriet/PycharmProjects/test-master/main/fontFiles/MSYH.TTC"  # 微软雅黑
+        , "font_main_size": 20  # 主标题20px
+        , "font_sub_size": 15  # 副标题15px
+        , "top_padding": 40  # 上边距40px
+        , "title_padding": 5  # 标题间隔5px
     }
 
 }

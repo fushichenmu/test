@@ -12,21 +12,14 @@ class ResourcePolylineHandler(ResourceCommonHandler):
         self.param_dict = param_dict
 
     def contour_map(self):
-        for shape in self.param_dict:
-            # # river
-            # "river": {
-            #     "file_name": "HYDL.shp",
-            #     "type": "polyline",
-            #     "gsLineThicknessF": 1.0,
-            #     "gsLineColor": "blue",
-            #     "gs_line_dash_pattern": 0
-            # },
-
-
+        for key, params_dict in self.param_dict.items():
+            file_name = params_dict.pop('file_name')
+            type = params_dict.pop('type')
             shape = Nio.open_file(shape_file_path+file_name, "r")
             lon = np.ravel(shape.variables["x"][:])
             lat = np.ravel(shape.variables["y"][:])
             params_dict['gsSegments'] = shape.variables["segments"][:, 0]
             resource = create_or_update_resource(params_dict=params_dict)
             # 2.绘制曲线图
-            Ngl.add_polyline(self.workstation, self.plot, lon, lat, resource)
+            if type =='polyline':
+                Ngl.add_polyline(self.workstation, self.plot, lon, lat, resource)
